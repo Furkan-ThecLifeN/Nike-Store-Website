@@ -19,7 +19,6 @@ Follow these steps to run the project locally:
 
 ### 1. Clone the Repository
 
-```bash
 git clone https://github.com/Furkan-ThecLifeN/Nike-Store-Website.git
 cd nike-store-website
 npm install
@@ -27,7 +26,6 @@ npm run dev
 
 
 Project Photos :
-
 
 ![Ekran görüntüsü 2025-06-14 112132](https://github.com/user-attachments/assets/692db497-a96a-41a1-b225-fdbd1def0c59)
 
