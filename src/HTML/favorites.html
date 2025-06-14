@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorites Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/public/css/favorites.css" />
+    <link rel="icon" href="/img/logo.png" type=image/x-icon />
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="nav-container">
+        <a href="/index.html">
+          <!-- Vite public dizininden alır -->
+          <h1>
+            <img src="/img/logo.png" alt="logo" width="28px" height="28px" />
+            Nike
+            <span>Store</span>
+          </h1>
+        </a>
+        <div class="nav-list2">
+          <div class="list-item2">
+            <a href="./shopping.html">Shopping</a>
+            <a href="./favorites.html">Favorites</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">Favorite Sneakers</section>
+
+    <section class="filter-section container">
+      <form id="filterForm" class="row g-3">
+        <div class="col-md-3">
+          <input
+            type="text"
+            class="form-control"
+            id="searchInput"
+            placeholder="Search products..."
+          />
+        </div>
+        <div class="col-md-2">
+          <select class="form-select" id="brandSelect">
+            <option selected>Brand</option>
+            <option>Nike</option>
+            <option>Adidas</option>
+            <option>Puma</option>
+            <option>New Balance</option>
+            <option>Reebok</option>
+            <option>Converse</option>
+            <option>Asics</option>
+            <option>Vans</option>
+            <option>Under Armour</option>
+            <option>Salomon</option>
+            <option>Timberland</option>
+            <option>Skechers</option>
+            <option>Brooks</option>
+            <option>Mizuno</option>
+            <option>Fila</option>
+            <option>On</option>
+            <option>Hoka One One</option>
+            <option>Jordan</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <select class="form-select" id="modelSelect">
+            <option selected>Model</option>
+            <option>Air Max 270</option>
+            <option>UltraBoost 22</option>
+            <option>RS-X³</option>
+            <option>990v5</option>
+            <option>Nano X1</option>
+            <option>Chuck Taylor All Star</option>
+            <option>Gel-Kayano 28</option>
+            <option>Old Skool</option>
+            <option>HOVR Phantom 2</option>
+            <option>Speedcross 5</option>
+            <option>Air Jordan 1 Mid</option>
+            <option>6 Inch Boot</option>
+            <option>GOwalk 5</option>
+            <option>Ghost 14</option>
+            <option>Wave Rider 25</option>
+            <option>Disruptor II</option>
+            <option>Cloud X</option>
+            <option>Clifton 8</option>
+            <option>ZoomX Vaporfly</option>
+            <option>NMD_R1</option>
+            <option>327</option>
+            <option>Club C 85</option>
+            <option>One Star</option>
+            <option>GT-2000</option>
+            <option>Sk8-Hi</option>
+            <option>Project Rock 3</option>
+            <option>X Ultra 4</option>
+            <option>Why Not Zer0.4</option>
+            <option>Field Boot</option>
+            <option>D'Lites</option>
+            <option>Adrenaline GTS 22</option>
+            <option>Inspire 17</option>
+            <option>Ray Tracer</option>
+            <option>Cloudnova</option>
+            <option>Air Max 280</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <select class="form-select" id="categorySelect">
+            <option selected>Category</option>
+            <option value="Spor">Spor</option>
+            <option value="Koşu">Koşu</option>
+            <option value="Günlük">Günlük</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Kaykay">Kaykay</option>
+            <option value="Outdoor">Outdoor</option>
+            <option value="Basketbol">Basketbol</option>
+            <option value="Bot">Bot</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <select class="form-select" id="priceSelect">
+            <option selected>Price</option>
+            <option value="under500">Under $500</option>
+            <option value="500-1000">$500 - $1000</option>
+            <option value="over1000">Over $1000</option>
+          </select>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" class="btn btn-primary w-100">Filter</button>
+        </div>
+      </form>
+    </section>
+
+    <div id="favorites-section"></div>
+
+    <div class="show-more-container">
+      <button id="show-more-btn">Daha Fazla Göster</button>
+    </div>
+
+    <div id="product-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-product-details">
+          <h2 id="modal-title"></h2>
+          <p id="modal-description"></p>
+          <button id="favorite-btn"></button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footerLeft">
+        <div class="footerMenu">
+          <h1 class="fMenuTitle">About Us</h1>
+          <ul class="fList">
+            <li class="fListItem">Company</li>
+            <li class="fListItem">Contact</li>
+            <li class="fListItem">Careers</li>
+            <li class="fListItem">Affiliates</li>
+            <li class="fListItem">Stores</li>
+          </ul>
+        </div>
+        <div class="footerMenu">
+          <h1 class="fMenuTitle">Useful Links</h1>
+          <ul class="fList">
+            <li class="fListItem">Support</li>
+            <li class="fListItem">Refund</li>
+            <li class="fListItem">FAQ</li>
+            <li class="fListItem">Feedback</li>
+            <li class="fListItem">Stories</li>
+          </ul>
+        </div>
+        <div class="footerMenu">
+          <h1 class="fMenuTitle">Products</h1>
+          <ul class="fList">
+            <li class="fListItem">Air Force</li>
+            <li class="fListItem">Air Jordan</li>
+            <li class="fListItem">Blazer</li>
+            <li class="fListItem">Crater</li>
+            <li class="fListItem">Hippie</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footerRight">
+        <div class="footerRightMenu">
+          <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+          <div class="fMail">
+            <input type="text" placeholder="your@email.com" class="fInput" />
+            <button class="fButton">Join!</button>
+          </div>
+        </div>
+        <div class="footerRightMenu">
+          <h1 class="fMenuTitle">Follow Us</h1>
+          <div class="fIcons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+        </div>
+        <div class="footerRightMenu">
+          <span class="copyright">@Lama Dev. All rights reserved. 2022.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="../JS/favorite.js"></script>
+    <!--     <script type="module" src="../JS/nav.js"></script>
+ -->
+  </body>
+</html>

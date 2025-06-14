@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Page</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/shopping.css" />
+    <link rel="icon" href="./img/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="nav-container d-flex justify-content-between align-items-center px-4 py-2">
+        <a href="/index.html" class="d-flex align-items-center text-decoration-none text-dark">
+          <img src="/img/logo.png" alt="Nike Logo" width="28" height="28" class="me-2" />
+          <h1 class="m-0 fs-4 fw-bold">Nike <span class="fw-normal">Store</span></h1>
+        </a>
+        <div class="nav-list2">
+          <div class="list-item2 d-flex gap-3">
+            <a href="./shopping.html" class="text-decoration-none">Shopping</a>
+            <a href="./favorites.html" class="text-decoration-none">Favorites</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero text-center py-5 bg-light fw-bold fs-2">Welcome to Our Shop</header>
+
+    <section class="filter-section container my-4">
+      <form id="filterForm" class="row g-3">
+        <div class="col-md-3">
+          <input type="text" class="form-control" placeholder="Search products..." />
+        </div>
+        <div class="col-md-2">
+          <select class="form-select">
+            <option selected>Brand</option>
+            <option>Nike</option>
+            <option>Adidas</option>
+            <option>Puma</option>
+            <option>New Balance</option>
+            <option>Reebok</option>
+            <option>Converse</option>
+            <option>Asics</option>
+            <option>Vans</option>
+            <option>Under Armour</option>
+            <option>Salomon</option>
+            <option>Timberland</option>
+            <option>Skechers</option>
+            <option>Brooks</option>
+            <option>Mizuno</option>
+            <option>Fila</option>
+            <option>On</option>
+            <option>Hoka One One</option>
+            <option>Jordan</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <select class="form-select">
+            <option selected>Model</option>
+            <option>Air Max 270</option>
+            <option>UltraBoost 22</option>
+            <option>RS-X³</option>
+            <option>990v5</option>
+            <option>Nano X1</option>
+            <option>Chuck Taylor All Star</option>
+            <option>Gel-Kayano 28</option>
+            <option>Old Skool</option>
+            <option>HOVR Phantom 2</option>
+            <option>Speedcross 5</option>
+            <option>Air Jordan 1 Mid</option>
+            <option>6 Inch Boot</option>
+            <option>GOwalk 5</option>
+            <option>Ghost 14</option>
+            <option>Wave Rider 25</option>
+            <option>Disruptor II</option>
+            <option>Cloud X</option>
+            <option>Clifton 8</option>
+            <option>ZoomX Vaporfly</option>
+            <option>NMD_R1</option>
+            <option>327</option>
+            <option>Club C 85</option>
+            <option>One Star</option>
+            <option>GT-2000</option>
+            <option>Sk8-Hi</option>
+            <option>Project Rock 3</option>
+            <option>X Ultra 4</option>
+            <option>Why Not Zer0.4</option>
+            <option>Field Boot</option>
+            <option>D'Lites</option>
+            <option>Adrenaline GTS 22</option>
+            <option>Inspire 17</option>
+            <option>Ray Tracer</option>
+            <option>Cloudnova</option>
+            <option>Air Max 280</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <select class="form-select">
+            <option selected>Category</option>
+            <option>Spor</option>
+            <option>Koşu</option>
+            <option>Günlük</option>
+            <option>Fitness</option>
+            <option>Kaykay</option>
+            <option>Outdoor</option>
+            <option>Basketbol</option>
+            <option>Bot</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <select class="form-select">
+            <option selected>Price</option>
+            <option>Under $500</option>
+            <option>$500 - $1000</option>
+            <option>Over $1000</option>
+          </select>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" class="btn btn-primary w-100">Filter</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="products-section container">
+      <div class="row g-4">
+        <!-- Example product cards -->
+        <!-- Replace with dynamic rendering if using a framework -->
+        ${Array.from({ length: 12 }).map(() => `
+          <div class="col-md-4">
+            <div class="product-card p-3 text-center border rounded shadow-sm h-100">
+              <img
+                src="https://source.unsplash.com/300x200/?product"
+                class="img-fluid mb-3"
+                alt="Product Image"
+              />
+              <h5 class="mb-1">Product Name</h5>
+              <p class="text-muted">$999</p>
+              <button class="btn btn-outline-primary">Buy Now</button>
+            </div>
+          </div>`).join("")}
+      </div>
+    </section>
+
+    <div class="pagination-wrapper my-5 d-flex justify-content-center">
+      <nav>
+        <ul class="pagination">
+          <li class="page-item disabled"><span class="page-link">Previous</span></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <footer class="bg-dark text-white py-5">
+      <div class="container d-flex flex-wrap justify-content-between">
+        <div class="footerLeft d-flex flex-wrap gap-5">
+          <div class="footerMenu">
+            <h5 class="fMenuTitle">About Us</h5>
+            <ul class="list-unstyled">
+              <li>Company</li>
+              <li>Contact</li>
+              <li>Careers</li>
+              <li>Affiliates</li>
+              <li>Stores</li>
+            </ul>
+          </div>
+          <div class="footerMenu">
+            <h5 class="fMenuTitle">Useful Links</h5>
+            <ul class="list-unstyled">
+              <li>Support</li>
+              <li>Refund</li>
+              <li>FAQ</li>
+              <li>Feedback</li>
+              <li>Stories</li>
+            </ul>
+          </div>
+          <div class="footerMenu">
+            <h5 class="fMenuTitle">Products</h5>
+            <ul class="list-unstyled">
+              <li>Air Force</li>
+              <li>Air Jordan</li>
+              <li>Blazer</li>
+              <li>Crater</li>
+              <li>Hippie</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footerRight d-flex flex-column gap-4 mt-4 mt-md-0">
+          <div class="footerRightMenu">
+            <h5 class="fMenuTitle">Subscribe to our newsletter</h5>
+            <div class="fMail d-flex gap-2">
+              <input type="email" placeholder="your@email.com" class="form-control" />
+              <button class="btn btn-primary">Join!</button>
+            </div>
+          </div>
+          <div class="footerRightMenu">
+            <h5 class="fMenuTitle">Follow Us</h5>
+            <div class="fIcons d-flex gap-3 fs-4">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-x-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+          </div>
+          <div class="footerRightMenu">
+            <small class="text-muted">@Lama Dev. All rights reserved. 2022.</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../JS/shopping.js"></script>
+  </body>
+</html>

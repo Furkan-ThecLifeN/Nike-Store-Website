@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="product.css" />
+
+  <link rel="icon" href="/img//logo.png" type=image/x-icon />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Product</title>
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="nav-container">
+        <h1>
+          <img src="/img//logo.png" alt="logo" width="28px" height="28px" />
+          Nike <span>Store</span>
+        </h1>
+
+        <div class="nav-list1">
+          <div class="list-item1">
+            <a href="#">Shopping</a>
+            <a href="#features">Features</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Help</a>
+          </div>
+          <div class="search1">
+            <input type="text" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+
+        <div class="icons1">
+          <a href="#"><i class="fa-solid fa-user"></i> </a>
+          <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+          <a href="#" class="bars"><i class="fa-solid fa-bars"></i></a>
+        </div>
+      </div>
+    </nav>
+    <section class="product-page">
+      <div class="container">
+        <div class="first-section">
+          <div class="left">
+            <div class="image-wrapper">
+              <div class="main-image">
+                <img id="mainImg" src="/img/crater2.png" alt="Product Image" />
+              </div>
+            </div>
+            <div class="small-images">
+              <button id="prevBtn" class="btn">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <div class="img">
+                <img
+                  src="img/crater2.png"
+                  alt="Small Image 1"
+                  class="small-image"
+                  onclick="changeImage('img/crater2.png')"
+                />
+                <img
+                  src="img/air2.png"
+                  alt="Small Image 1"
+                  class="small-image"
+                  onclick="changeImage('img/air2.png')"
+                />
+                <img
+                  src="img/blazer2.png"
+                  alt="Small Image 2"
+                  class="small-image"
+                  onclick="changeImage('img/blazer2.png')"
+                />
+                <img
+                  src="img/crater.png"
+                  alt="Small Image 3"
+                  class="small-image"
+                  onclick="changeImage('img/crater.png')"
+                />
+              </div>
+              <button id="nextBtn" class="btn">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="right">
+            <h2>Product 01</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
+              explicabo, incidunt aperiam a repudiandae, reprehenderit
+              cupiditate sunt sapiente quisquam, soluta consequuntur fuga
+              tempora adipisci exercitationem impedit! Cupiditate in reiciendis
+              ea?
+            </p>
+            <p class="price"><strong>Fiyat:</strong> $99.99</p>
+            <div class="options">
+              <div class="option">Renk: Siyah</div>
+              <div class="option">Beden: M</div>
+              <div class="option">Kargo: Ücretsiz</div>
+            </div>
+            <button class="buy-btn">Satın Al</button>
+          </div>
+        </div>
+
+        <div class="second-section">
+          <div class="product-about">
+            <h1>Product About</h1>
+          </div>
+          <div class="product-container">
+            <img src="img/crater2.png" alt="Ürün Resmi" class="product-image" />
+            <div class="product-info">
+              <h1>Ürün Adı</h1>
+              <p class="tagline">
+                Kalite ve şıklığı bir araya getiren mükemmel tasarım.
+              </p>
+              <p class="description">
+                Bu ürün, en son teknoloji kullanılarak üretilmiştir ve uzun
+                ömürlü kullanım sunar. Zarif tasarımıyla her ortama uyum sağlar.
+                Hafif ve dayanıklı yapısıyla öne çıkar.
+              </p>
+              <div class="features">
+                <h3>Öne Çıkan Özellikler</h3>
+                <ul>
+                  <li>✔️ Yüksek kaliteli malzeme</li>
+                  <li>✔️ Modern ve şık tasarım</li>
+                  <li>✔️ Dayanıklı ve uzun ömürlü</li>
+                  <li>✔️ Çevre dostu üretim</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-section" id="shop">
+          <div class="section-header">
+            <h1>Similar Items</h1>
+          </div>
+          <div class="shop-container">
+            <div class="product-box">
+              <img src="img/blazer2.png" alt="Blazer" />
+              <h3>Blazer 2</h3>
+              <p>Elegant and durable design for any occasion.</p>
+              <span class="price">$115</span>
+              <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product-box">
+              <img src="img/blazer.png" alt="Blazer" />
+              <h3>Blazer 1</h3>
+              <p>Minimalist touch with a modern style.</p>
+              <span class="price">$99</span>
+              <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product-box">
+              <img src="img/crater.png" alt="Crater" />
+              <h3>Crater</h3>
+              <p>Crafted with premium materials for maximum comfort.</p>
+              <span class="price">$199</span>
+              <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product-box">
+              <img src="img/air2.png" alt="Air" />
+              <h3>Air</h3>
+              <p>Lightweight and stylish for everyday wear.</p>
+              <span class="price">$115</span>
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <div class="footerLeft">
+            <div class="footerMenu">
+              <h1 class="fMenuTitle">About Us</h1>
+              <ul class="fList">
+                <li class="fListItem">Company</li>
+                <li class="fListItem">Contact</li>
+                <li class="fListItem">Careers</li>
+                <li class="fListItem">Affiliates</li>
+                <li class="fListItem">Stores</li>
+              </ul>
+            </div>
+            <div class="footerMenu">
+              <h1 class="fMenuTitle">Useful Links</h1>
+              <ul class="fList">
+                <li class="fListItem">Support</li>
+                <li class="fListItem">Refund</li>
+                <li class="fListItem">FAQ</li>
+                <li class="fListItem">Feedback</li>
+                <li class="fListItem">Stories</li>
+              </ul>
+            </div>
+            <div class="footerMenu">
+              <h1 class="fMenuTitle">Products</h1>
+              <ul class="fList">
+                <li class="fListItem">Air Force</li>
+                <li class="fListItem">Air Jordan</li>
+                <li class="fListItem">Blazer</li>
+                <li class="fListItem">Crater</li>
+                <li class="fListItem">Hippie</li>
+              </ul>
+            </div>
+          </div>
+          <div class="footerRight">
+            <div class="footerRightMenu">
+              <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+              <div class="fMail">
+                <input
+                  type="text"
+                  placeholder="your@email.com"
+                  class="fInput"
+                />
+                <button class="fButton">Join!</button>
+              </div>
+            </div>
+            <div class="footerRightMenu">
+              <h1 class="fMenuTitle">Follow Us</h1>
+              <div class="fIcons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+            </div>
+            <div class="footerRightMenu">
+              <span class="copyright"
+                >@Lama Dev. All rights reserved. 2022.</span
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <script src="product.js"></script>
+  </body>
+</html>
