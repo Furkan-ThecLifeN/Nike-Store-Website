@@ -13,10 +13,6 @@ Built with **Vite** and **Vanilla JavaScript**, featuring:
 - Vanilla JavaScript
 - Vite (for fast development and build)
 
-## 🖥️ Live Demo
-
-[👉 View Live](https://your-live-demo-link.com)
-
 ## 🚀 Getting Started
 
 Follow these steps to run the project locally:
